@@ -4,7 +4,6 @@ title: Blog
 ---
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,6 +21,7 @@ title: Blog
     <link href="../../../../assets/owl.carousel/owl.theme.default.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="../../../../css/style.css" rel="stylesheet">
+    <link href="../../../../css/colors/blue.css" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -43,76 +43,21 @@ title: Blog
     ga('send', 'pageview');
     </script>
 </head>
-
 <body class="fix-header">
-    <!-- ============================================================== -->
-    <!-- Preloader - style you can find in spinners.css -->
-    <!-- ============================================================== -->
     <div class="preloader">
         <svg class="circular" viewBox="25 25 50 50">
             <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
     </div>
-
-    <!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- ============================================================== -->
+       {% include header.html %}
     <div id="main-wrapper">
-        <!-- ============================================================== -->
-        <!-- Topbar header - style you can find in pages.scss -->
-        <!-- ============================================================== -->
-        <header class="topheader" id="top">
-            <div class="fix-width">
-                <nav class="navbar navbar-toggleable-md navbar-light p-l-0">
-                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-                    <!-- Logo will be here -->
-                    <a class="navbar-brand" href="index.html"><img src="../../../../images/material-admin-logo.png" alt="admin template" /></a>
-                    <!-- This is the navigation menu -->
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav ml-auto stylish-nav">
-                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Demos</a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="https://wrappixel.com/demos/admin-templates/material-pro/material/index.html" target="_blank">Main</a> <a class="dropdown-item" href="https://wrappixel.com/demos/admin-templates/material-pro/minisidebar/index2.html" target="_blank">MiniSidebar</a> <a class="dropdown-item" href="https://wrappixel.com/demos/admin-templates/material-pro/dark/index5.html" target="_blank">Dark</a> <a class="dropdown-item" href="https://wrappixel.com/demos/admin-templates/material-pro/horizontal/index3.html" target="_blank">Horizontal</a>
-                                    <!-- <a class="dropdown-item" href="#" target="_blank">Angular starter kit</a> --><a class="dropdown-item" href="https://wrappixel.com/demos/admin-templates/material-pro/material-rtl/index4.html" target="_blank">Main-RTL</a> <a class="dropdown-item" href="https://wrappixel.com/demos/admin-templates/material-pro/materialpro-angular/index.html" target="_blank">Angular CLI Starter kit</a> </div>
-                            </li>
-                            <li class="nav-item"> <a class="nav-link" href="../Documentation/document.html" target="_blank">Documentation</a> </li>
-                            <li class="nav-item"> <a class="m-t-5 btn btn-info font-13" href="https://themeforest.net/item/materialpro-bootstrap-4-admin-template/20203944?ref=MARUTI" style="width:120px;">BUY NOW</a> </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </header>
-        <!-- ============================================================== -->
-        <!-- Page wrapper  -->
-        <!-- ============================================================== -->
         <div class="page-wrapper">
-            <!-- ============================================================== -->
-            <!-- Container fluid  -->
-            <!-- ============================================================== -->
-            <div class="container-fluid">
-               
+            <div class="container-fluid">   
                   {{ content }}
 
-                <!-- ============================================================== -->
-                <!-- footer -->
-                <!-- ============================================================== -->
                  {% include footer.html %}
-                <!-- ============================================================== -->
-                <!-- End footer -->
-                <!-- ============================================================== -->
             </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
         </div>
-        <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
-        <!-- ============================================================== -->
     </div>
-    <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
-    <!-- ============================================================== -->
     <script src="../../../../js/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="../../../../bootstrap/js/tether.min.js"></script>

@@ -1,4 +1,6 @@
-   <header class="topbar">
+<header class="topbar">
+ <div class="fix-width">
+         <div class="row row-centered pos">
             <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
                 <!-- ============================================================== -->
                 <!-- Logo -->
@@ -9,29 +11,32 @@
                         <b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <img src="../../../../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                            <img src="../../../../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span>
                          <!-- dark Logo text -->
-                         <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                         <img src="../../../../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
                          <!-- Light Logo text -->    
-                         <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                         <img src="../../../../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
                 <!-- ============================================================== -->
-                <div class="navbar-collapse">
-                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted waves-effect waves-dark" href="index.html"> <h5>Landing Page</h5></a></li>
-                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted waves-effect waves-dark" href="features.html"> <h5>Features</h5></a></li>
-                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted waves-effect waves-dark" href="testimonial.html"> <h5>Testimonial</h5></a></li>
-                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted waves-effect waves-dark" href="projects.html"> <h5>Projects</h5></a></li>
-                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted waves-effect waves-dark" href="blog.html">  <h5>Blogs</h5></a></li>
-                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted waves-effect waves-dark" href="about.html"> <h5>About</h5></a></li>
-
-                </div>
+                <div class="navbar-collapse col-lg-8 col-xs-12 col-centered">
+                  {% for my_page in site.pages %}
+                  {% if my_page.title %}
+                  <li class="list-unstyled"> <a class="nav-link text-white waves-effect waves-dark" href="{{ my_page.url | prepend: site.baseurl }}"><h5 class="text-white">{{ my_page.title }}</h5></a></li>
+                  {% endif %}
+                  {% endfor %}
+               </div>               
             </nav>
-        </header>
+        </div>
+   </div>
+</header>
+
+
+
